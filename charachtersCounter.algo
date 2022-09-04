@@ -1,0 +1,35 @@
+ALGORITHM charactersCounter
+VAR
+    chaine : char[30];
+    word,i,vowel,size : INTEGER;
+BEGIN
+    word := 0;
+    vowel := 0;
+    size := 0;
+    i := 0;
+    read (chaine);
+    WHILE (chaine[i]<>".") DO
+        size := size + 1;
+        IF (chaine[i] = " ") THEN
+            word := word + 1;
+        END_IF
+        SWITCH (chaine[i]) DO
+            case 'a' : vowel := vowel + 1; break;
+            case 'e' : vowel := vowel + 1; break;
+            case 'i' : vowel := vowel + 1; break;
+            case 'o' : vowel := vowel + 1; break;
+            case 'u' : vowel := vowel + 1; break;
+            case 'y' : vowel := vowel + 1; break;
+            case 'A' : vowel := vowel + 1; break;
+            case 'E' : vowel := vowel + 1; break;
+            case 'I' : vowel := vowel + 1; break;
+            case 'O' : vowel := vowel + 1; break;
+            case 'U' : vowel := vowel + 1; break;
+            case 'Y' : vowel := vowel + 1; break;
+            default : continue; break;
+        END_SWITCH
+    END_WHILE
+    write("the sentence has " + size + "charachters");
+    write("the sentence has " + word + "words");
+    write("the sentence has " + vowel + "vowels");
+END 
